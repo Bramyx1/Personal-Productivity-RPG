@@ -1,6 +1,7 @@
 const STORAGE_KEY = "executiveOperatingSystemState";
 const MAX_BRIEF_ENTRIES = 10;
 const MAX_HISTORY_ENTRIES = 20;
+console.log("RPG app.js LOADED - version Feb18");
 
 const DIFFICULTY_REWARDS = {
   Easy: { xp: 10, capital: 5 },
