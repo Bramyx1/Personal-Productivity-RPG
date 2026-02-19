@@ -5,7 +5,10 @@ const MAX_HISTORY_ENTRIES = 20;
 const DIFFICULTY_REWARDS = {
   Easy: { xp: 10, capital: 5 },
   Medium: { xp: 25, capital: 12 },
-  Hard: { xp: 50, capital: 25 }
+  Hard: { xp: 50, capital: 25 },
+  "Quick Win": { xp: 12, capital: 6 },
+  Standard: { xp: 24, capital: 12 },
+  "High Impact": { xp: 42, capital: 21 }
 };
 
 const SHOP_ITEMS = {
@@ -80,6 +83,7 @@ function createDefaultState() {
 }
 
 let state = loadState();
+state = mergeSchoolOpsActions(state);
 let lastFocusedElement = null;
 
 const ui = {
@@ -126,6 +130,8 @@ function bindEvents() {
   for (const button of ui.shopButtons) {
     button.addEventListener("click", onShopPurchase);
   }
+
+  window.addEventListener("message", onBlackboardWindowMessage);
 }
 
 function loadState() {
@@ -195,7 +201,16 @@ function sanitizeActions(candidate, fallback) {
       name: item.name.trim(),
       difficulty: item.difficulty,
       completed: item.completed === true || item.status === "completed",
-      completedAt: typeof item.completedAt === "string" ? item.completedAt : ""
+      completedAt: typeof item.completedAt === "string" ? item.completedAt : "",
+      source: typeof item.source === "string" ? item.source : "",
+      sourceId: typeof item.sourceId === "string" ? item.sourceId : "",
+      sourceUrl: typeof item.sourceUrl === "string" ? item.sourceUrl : "",
+      dueAt: typeof item.dueAt === "string" ? item.dueAt : "",
+      courseName: typeof item.courseName === "string" ? item.courseName : "",
+      priorityScore:
+        typeof item.priorityScore === "number" && Number.isFinite(item.priorityScore)
+          ? item.priorityScore
+          : null
     }))
     .filter((item) => item.name.length > 0);
 }
@@ -224,6 +239,39 @@ function sanitizeBrief(candidate) {
   }
 
   return candidate.filter((item) => typeof item === "string").slice(0, MAX_BRIEF_ENTRIES);
+}
+
+function mergeSchoolOpsActions(currentState) {
+  const payload = globalThis.__schoolOpsSync;
+  if (!payload || !Array.isArray(payload.actions)) {
+    return currentState;
+  }
+
+  const existing = Array.isArray(currentState.actions) ? currentState.actions : [];
+  const existingById = new Map(existing.map((item) => [item.id, item]));
+
+  const mergedFromSchoolOps = payload.actions
+    .filter((item) => item && typeof item.name === "string" && DIFFICULTY_REWARDS[item.difficulty])
+    .map((item) => {
+      const prior = existingById.get(item.id);
+      return {
+        id: typeof item.id === "string" ? item.id : makeId(),
+        name: item.name.trim(),
+        difficulty: item.difficulty,
+        completed: prior ? prior.completed === true : item.completed === true,
+        completedAt: prior && typeof prior.completedAt === "string" ? prior.completedAt : "",
+        source: "SchoolOps"
+      };
+    })
+    .filter((item) => item.name.length > 0);
+
+  const localCustomActions = existing.filter((item) => item?.source !== "SchoolOps");
+  const merged = [...mergedFromSchoolOps, ...localCustomActions];
+
+  return {
+    ...currentState,
+    actions: merged
+  };
 }
 
 function saveState() {
@@ -556,6 +604,155 @@ function onGlobalKeyDown(event) {
   if (event.key === "Escape" && !ui.helpModal.classList.contains("hidden")) {
     closeHelpModal();
   }
+}
+
+function onBlackboardWindowMessage(event) {
+  if (event.origin !== window.location.origin) {
+    return;
+  }
+
+  const msg = event.data;
+  if (!msg || msg.channel !== "BB_INTEL_SYNC_V1") {
+    return;
+  }
+
+  const tasks = msg.payload?.tasks || [];
+  if (!Array.isArray(tasks) || tasks.length === 0) {
+    return;
+  }
+
+  importFromBlackboard(tasks);
+}
+
+function importFromBlackboard(tasks) {
+  if (!tasks.length) {
+    showToast("Imported 0 tasks from Blackboard", "success");
+    return;
+  }
+
+  const existingKeys = new Set(
+    (state.actions || [])
+      .map((action) => getTaskDedupeKey(action))
+      .filter(Boolean)
+  );
+  const seenIncoming = new Set();
+  const imported = [];
+
+  for (const task of tasks) {
+    const action = taskToAction(task);
+    if (!action) {
+      continue;
+    }
+
+    const dedupeKey = getTaskDedupeKey(action);
+    if (!dedupeKey || existingKeys.has(dedupeKey) || seenIncoming.has(dedupeKey)) {
+      continue;
+    }
+
+    seenIncoming.add(dedupeKey);
+    imported.push(action);
+  }
+
+  if (!imported.length) {
+    showToast("Imported 0 tasks from Blackboard", "success");
+    return;
+  }
+
+  state.actions = [...imported, ...state.actions];
+  sortActionsByUrgency();
+  addBrief(`Imported ${imported.length} tasks from Blackboard`);
+  saveState();
+  render();
+  showToast(`Imported ${imported.length} tasks from Blackboard`, "success");
+}
+
+function taskToAction(task) {
+  if (!task || typeof task.title !== "string") {
+    return null;
+  }
+
+  const rawTitle = task.title.trim();
+  if (!rawTitle) {
+    return null;
+  }
+
+  const recommendedXP = Number.parseInt(task.recommendedXP, 10);
+  const difficulty = mapDifficultyByRecommendedXP(recommendedXP);
+  const sourceId = typeof task.id === "string" ? task.id : "";
+  const sourceUrl = typeof task.url === "string" ? task.url : "";
+  const dueAt = typeof task.dueAt === "string" ? task.dueAt : "";
+  const courseName = typeof task.courseName === "string" ? task.courseName : "";
+  const priorityScore = Number.isFinite(task.priorityScore)
+    ? task.priorityScore
+    : Number.parseInt(task.priorityScore, 10);
+  const title = `${courseName ? `[${courseName}] ` : ""}${rawTitle || "Untitled task"}`.trim();
+
+  return {
+    id: sourceId ? `bb-${sourceId}` : `bb-${makeId()}`,
+    name: title,
+    difficulty,
+    xpReward: Number.isFinite(recommendedXP) ? recommendedXP : 0,
+    capitalReward: 0,
+    completed: false,
+    completedAt: "",
+    createdAt: new Date().toISOString(),
+    source: "Blackboard",
+    sourceId,
+    sourceUrl,
+    dueAt,
+    courseName,
+    priorityScore: Number.isFinite(priorityScore) ? priorityScore : null,
+    typeGuess: typeof task.typeGuess === "string" ? task.typeGuess : null
+  };
+}
+
+function getTaskDedupeKey(action) {
+  const sourceUrl = typeof action?.sourceUrl === "string" ? action.sourceUrl.trim() : "";
+  const sourceId = typeof action?.sourceId === "string" ? action.sourceId.trim() : "";
+  if (sourceUrl) {
+    return `url:${sourceUrl}`;
+  }
+  if (sourceId) {
+    return `id:${sourceId}`;
+  }
+  return "";
+}
+
+function mapDifficultyByRecommendedXP(recommendedXP) {
+  if (!Number.isFinite(recommendedXP)) {
+    return "Standard";
+  }
+  if (recommendedXP <= 30) {
+    return "Quick Win";
+  }
+  if (recommendedXP <= 80) {
+    return "Standard";
+  }
+  return "High Impact";
+}
+
+function sortActionsByUrgency() {
+  const now = Date.now();
+  const toTs = (d) => {
+    if (!d) return null;
+    const ts = Date.parse(d);
+    return Number.isFinite(ts) ? ts : null;
+  };
+
+  state.actions.sort((a, b) => {
+    const ad = toTs(a.dueAt);
+    const bd = toTs(b.dueAt);
+
+    const aOver = ad !== null && ad < now;
+    const bOver = bd !== null && bd < now;
+    if (aOver !== bOver) return aOver ? -1 : 1;
+
+    if (ad !== null && bd !== null && ad !== bd) return ad - bd;
+    if (ad !== null && bd === null) return -1;
+    if (ad === null && bd !== null) return 1;
+
+    return Number(b.priorityScore || 0) - Number(a.priorityScore || 0);
+  });
 }
 
 function showToast(message, type = "success") {
