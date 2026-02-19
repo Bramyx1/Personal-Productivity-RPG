@@ -1,3 +1,4 @@
+console.log("RPG SYNC RECEIVER LOADED");
 const STORAGE_KEY = "executiveOperatingSystemState";
 const MAX_BRIEF_ENTRIES = 10;
 const MAX_HISTORY_ENTRIES = 20;
