@@ -1,0 +1,109 @@
+:root {
+  --bg: #f4f7f9;
+  --card: #ffffff;
+  --text: #172026;
+  --muted: #4f6470;
+  --accent: #0a6b77;
+  --accent-strong: #084f57;
+  --border: #d5e1e8;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top right, #d7ecf0 0%, var(--bg) 40%, #eaf1f5 100%);
+  color: var(--text);
+  min-width: 360px;
+}
+
+.wrap {
+  padding: 14px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+button {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-strong);
+}
+
+.status {
+  margin: 10px 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--muted);
+}
+
+.toggle-row {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.toggle-row input {
+  accent-color: var(--accent);
+}
+
+h2 {
+  margin: 10px 0 6px;
+  font-size: 14px;
+}
+
+.assignment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.assignment-list li {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.assignment-list li:last-child {
+  border-bottom: none;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.meta {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.small {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 8px 0 0;
+}

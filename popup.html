@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackboard Course Intel</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Blackboard Course Intel</h1>
+      <div class="actions">
+        <button id="scanPageBtn">Scan this page</button>
+        <button id="guidedScanBtn">Guided scan all courses</button>
+        <button id="syncBtn">Sync All Stored Tasks</button>
+        <button id="syncPendingBtn">Sync Now</button>
+        <button id="sendTestTaskBtn">Send Test Task</button>
+      </div>
+      <label class="toggle-row" for="debugTitlesToggle">
+        <input id="debugTitlesToggle" type="checkbox" />
+        <span>Debug titles</span>
+      </label>
+      <p id="status" class="status">Ready.</p>
+      <section>
+        <h2>Assignments</h2>
+        <ul id="assignmentList" class="assignment-list"></ul>
+      </section>
+      <p class="small">
+        Scans only and never submits actions to Blackboard.
+      </p>
+      <p class="small"><a href="#" id="openOptions">Options</a></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
