@@ -1021,6 +1021,11 @@ for (const globalPath of ['/ultra/calendar', '/ultra/stream']) {
 const uniqueAssignments = uniqBy(
   allAssignments
     .filter((x) => isRealAssignmentRecord(x))
+    .filter((x) => {
+      if (!x.dueAt) return true;
+      const dueMs = Date.parse(x.dueAt);
+      return Number.isNaN(dueMs) || dueMs >= Date.now();
+    })
     .map(scoreAssignment),
   (x) => `${x.courseTitle}|${x.title}|${x.link || ''}|${x.dueAt || ''}`
 );
@@ -1154,7 +1159,13 @@ const reassignedAnnouncements = assignmentsRaw.filter(looksLikeAnnouncementRecor
   postedAt: inferDateFromText(`${a.title || ''} ${a.sourcePage || ''}`)
 }));
 
-const assignments = assignmentsRaw.filter((a) => !looksLikeAnnouncementRecord(a) && !looksLikeCalendarUiNoise(a));
+const assignments = assignmentsRaw.filter((a) => {
+  if (looksLikeAnnouncementRecord(a) || looksLikeCalendarUiNoise(a)) return false;
+  const dueAt = a.dueAt || inferDateFromText(`${a.title || ''} ${a.sourcePage || ''}`);
+  if (!dueAt) return true;
+  const dueMs = Date.parse(dueAt);
+  return Number.isNaN(dueMs) || dueMs >= now;
+});
 const announcements = [...announcementsRaw, ...reassignedAnnouncements];
 
 const enrichedAssignments = assignments.map((a) => {
