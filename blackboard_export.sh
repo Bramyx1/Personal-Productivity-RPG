@@ -165,6 +165,10 @@ function extractDateFromText(text) {
 function normalizeForCalendar(text) {
   return String(text || '')
     .toLowerCase()
+    .replace(/\bch\b/g, 'chapter')
+    .replace(/\bdb\b/g, 'discussion board')
+    .replace(/\bassignments?\s*#\s*(\d+)\b/g, 'assignment $1')
+    .replace(/\bdiscussion\s*#\s*(\d+)\b/g, 'discussion $1')
     .replace(/[^a-z0-9\s]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
@@ -182,15 +186,22 @@ async function loadCalendarOverrides() {
     const parsed = JSON.parse(raw);
 
     const exactByCourse = new Map();
+    const seedByCourse = new Map();
     for (const entry of parsed.exact || []) {
       if (!entry?.course || !entry?.title || !entry?.dueAt) continue;
       const course = String(entry.course).toUpperCase();
       const list = exactByCourse.get(course) || [];
+      const seedList = seedByCourse.get(course) || [];
       list.push({
         titleNorm: normalizeForCalendar(entry.title),
         dueAt: entry.dueAt
       });
+      seedList.push({
+        title: String(entry.title).trim(),
+        dueAt: entry.dueAt
+      });
       exactByCourse.set(course, list);
+      seedByCourse.set(course, seedList);
     }
 
     const patternsByCourse = new Map();
@@ -206,7 +217,7 @@ async function loadCalendarOverrides() {
       patternsByCourse.set(course, list);
     }
 
-    calendarOverrides = { exactByCourse, patternsByCourse };
+    calendarOverrides = { exactByCourse, patternsByCourse, seedByCourse };
   } catch {
     calendarOverrides = null;
   }
@@ -236,6 +247,38 @@ function getCalendarDueOverride(courseTitle, assignmentTitle) {
   }
 
   return null;
+}
+
+function buildCalendarSeedAssignments(courses) {
+  if (!calendarOverrides?.seedByCourse) return [];
+  const nowMs = Date.now();
+  const out = [];
+
+  for (const course of courses || []) {
+    const courseTitle = course.title || '';
+    const courseUrl = course.url || '';
+    const courseCode = getCourseCodeFromTitle(courseTitle);
+    if (!courseCode) continue;
+
+    const seeds = calendarOverrides.seedByCourse.get(courseCode) || [];
+    for (const seed of seeds) {
+      const dueMs = Date.parse(seed.dueAt);
+      if (!Number.isNaN(dueMs) && dueMs < nowMs) continue;
+      out.push({
+        courseTitle,
+        courseUrl,
+        sourcePage: 'calendar_override',
+        pageUrl: courseUrl,
+        title: seed.title,
+        assignmentTitle: seed.title,
+        link: null,
+        dueAt: seed.dueAt,
+        requirements: []
+      });
+    }
+  }
+
+  return out;
 }
 
 function scoreAssignment(item) {
@@ -1133,6 +1176,8 @@ for (const bucket of courseBuckets.values()) {
   allAnnouncements.push(...bucket.announcements);
   allSyllabi.push(...bucket.syllabi);
 }
+
+allAssignments.push(...buildCalendarSeedAssignments(courses));
 
 for (const globalPath of ['/ultra/calendar', '/ultra/stream']) {
   const p = await context.newPage();
