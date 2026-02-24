@@ -1,0 +1,44 @@
+CIT 350 Spring 2026 Course Outline & Weekly Schedule
+Week Start Date End Date Week’s Topics All Assignments
+1 1/19/2026 1/25/2026 1/19 – Martin Luther King, Jr. Day (University
+closed) Assignments#1 are due by Sunday, 2/1/2026. No later
+than 11:59 pm.	Introduction to Database Systems
+Chapter 1: 1.1 - 1.5
+2 1/26/2026 2/1/2026 Data Modeling and Design Assignments#2 are due by Sunday, 02/1/2026. No
+later than 11:59 pm.	Chapter 2: 2.1 to 2.6
+3 2/2/2026 2/8/2026 Data Modeling and Design Assignments#3 are due by Sunday, 2/8/2026. No later
+than 11:59 pm.	Chapter 2: 2.7 to 2.9
+4 2/9/2026 2/15/2026 Relational Theory Assignments#4 are due by Sunday, 2/15/2026. No
+later than 11:59 pm.	Chapter 3: 3.1 to 3.4
+5 2/16/2026 2/22/2026 Relational Theory Assignments#5 are due by Sunday, 2/22/2026. No
+later than 11:59 pm.	Chapter 3: 3.5 to 3.7
+6 2/23/2026 3/1/2026 Relational Theory Assignments#6 are due by Sunday, 3/1/2026. No later
+than 11:59 pm.	Chapter 3: 3.8 to 3.9
+7 3/2/2026 3/8/2026 Relational Theory Assignments#7 are due by Sunday, 3/8/2026. No later
+than 11:59 pm.	Chapter 3: 3.10 to 3.14
+8 3/9/2026 3/15/2026 Structured Query Language Assignments#8 are due by Sunday, 3/15/2026. No
+later than 11:59 pm.
+Chapter 4: 4.1 to 4.3 Midterm Exam (Wednesday 3/11/2026 – Sunday
+3/15/2026)
+SP 3/16/2026 3/22/2026 Spring Break (3/16 to 3/22) None
+9 3/23/2026 3/29/2026 Structured Query Language Assignments#9 are due by Sunday, 3/29/2026. No
+later than 11:59 pm	Chapter 4: 4.4 to 4.5
+10 3/30/2026 4/5/2026 Structured Query Language Assignments#10 are due by 4/5/2026. No later than
+11:59 pm.
+Chapter 4: 4.6 to 4.7 Last day to drop a class with a W
+11 4/6/2026 4/12/2026 Structured Query Language Assignments#11 are due by 4/12/2026. No later than
+11:59 pm.	Chapter 4: 4.8 to 4.9
+12 4/13/2026 4/19/2026 Structured Query Language Assignments#12 are due by 4/19/2026. No later than
+11:59 pm.	Chapter 4: 4.10 to 4.13
+
+-- 1 of 2 --
+
+13 4/20/2026 4/26/2026 Database Design Assignments#13 are due by 4/26/2026. No later than
+11:59 pm.	Chapter 5: 5.1 to 5.3
+14 4/27/2026 5/1/2026 Normalization Assignments#14 are due by Friday, 5/1/2026. No later
+than 11:59 pm	Chapter 6: 6.1 to 6.3
+FW 5/2/2026 5/5/2026 Final Week (Saturday 5/2 to Tuesday 5/5)
+THIS COURSE SYLLABUS/SCHEDULE IS SUBJECT TO CHANGE WITH NOTICE.
+
+-- 2 of 2 --
+

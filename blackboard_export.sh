@@ -10,10 +10,12 @@ if [[ $# -lt 1 ]]; then
 fi
 
 BLACKBOARD_BASE_URL="$1"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 WORKDIR="${HOME}/.blackboard-export"
 OUT_DIR="${WORKDIR}/out"
 PROFILE_DIR="${WORKDIR}/profile"
 DEBUG_TITLE_EXTRACTION="${DEBUG_TITLE_EXTRACTION:-0}"
+CALENDAR_OVERRIDES="${SCRIPT_DIR}/calendar_sources/due_date_overrides.json"
 
 mkdir -p "$WORKDIR" "$OUT_DIR" "$PROFILE_DIR"
 cd "$WORKDIR"
@@ -51,6 +53,8 @@ const base = process.env.BLACKBOARD_BASE_URL;
 const outDir = process.env.OUT_DIR;
 const profileDir = process.env.PROFILE_DIR;
 const debugTitleExtraction = process.env.DEBUG_TITLE_EXTRACTION === '1';
+const calendarOverridesPath = process.env.CALENDAR_OVERRIDES;
+let calendarOverrides = null;
 
 function ask(msg) {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
@@ -155,6 +159,82 @@ function extractDateFromText(text) {
     const parsed = parseCandidate(m[1]);
     if (parsed) return parsed;
   }
+  return null;
+}
+
+function normalizeForCalendar(text) {
+  return String(text || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getCourseCodeFromTitle(courseTitle) {
+  const m = String(courseTitle || '').toUpperCase().match(/\b(CIT300|CIT302|CIT350|CRIM330)\b/);
+  return m ? m[1] : null;
+}
+
+async function loadCalendarOverrides() {
+  if (!calendarOverridesPath) return;
+  try {
+    const raw = await fs.readFile(calendarOverridesPath, 'utf8');
+    const parsed = JSON.parse(raw);
+
+    const exactByCourse = new Map();
+    for (const entry of parsed.exact || []) {
+      if (!entry?.course || !entry?.title || !entry?.dueAt) continue;
+      const course = String(entry.course).toUpperCase();
+      const list = exactByCourse.get(course) || [];
+      list.push({
+        titleNorm: normalizeForCalendar(entry.title),
+        dueAt: entry.dueAt
+      });
+      exactByCourse.set(course, list);
+    }
+
+    const patternsByCourse = new Map();
+    for (const entry of parsed.patterns || []) {
+      if (!entry?.course || !entry?.pattern || !entry?.dueAt) continue;
+      const course = String(entry.course).toUpperCase();
+      const list = patternsByCourse.get(course) || [];
+      try {
+        list.push({ re: new RegExp(entry.pattern, 'i'), dueAt: entry.dueAt });
+      } catch {
+        // Skip invalid regex entries.
+      }
+      patternsByCourse.set(course, list);
+    }
+
+    calendarOverrides = { exactByCourse, patternsByCourse };
+  } catch {
+    calendarOverrides = null;
+  }
+}
+
+function getCalendarDueOverride(courseTitle, assignmentTitle) {
+  if (!calendarOverrides) return null;
+  const courseCode = getCourseCodeFromTitle(courseTitle);
+  if (!courseCode) return null;
+
+  const titleText = String(assignmentTitle || '');
+  const titleNorm = normalizeForCalendar(titleText);
+  if (!titleNorm) return null;
+
+  const exactList = calendarOverrides.exactByCourse.get(courseCode) || [];
+  for (const item of exactList) {
+    if (item.titleNorm === titleNorm || item.titleNorm.includes(titleNorm) || titleNorm.includes(item.titleNorm)) {
+      return item.dueAt;
+    }
+  }
+
+  const patternList = calendarOverrides.patternsByCourse.get(courseCode) || [];
+  for (const item of patternList) {
+    if (item.re.test(titleText)) {
+      return item.dueAt;
+    }
+  }
+
   return null;
 }
 
@@ -332,7 +412,8 @@ function correlateCalendarAssignments(calendarEvents, assignmentCandidates, cour
       title,
       assignmentTitle: title,
       link: matched?.link || event.link || null,
-      dueAt: event.dueAt || matched?.dueAt || null,
+      dueAt: event.dueAt || matched?.dueAt || getCalendarDueOverride(courseTitle, title) || null,
+      context: `${event.context || ''} ${matched?.context || ''}`.trim(),
       correlationScore: bestScore,
       requirements: extractRequirementsFromContext(event.context || '', matched?.context || '', title)
     });
@@ -803,7 +884,8 @@ async function scrapePageItems(page, meta) {
       pageUrl: item.pageUrl,
       title,
       link: item.link,
-      dueAt: extractDateFromText(`${title} ${item.context || ''}`)
+      context: item.context || '',
+      dueAt: extractDateFromText(`${title} ${item.context || ''}`) || getCalendarDueOverride(item.courseTitle, title)
     };
 
     const effectiveKind = fromAnnouncementsPage && item.kind === 'assignment' ? 'announcement' : item.kind;
@@ -816,6 +898,7 @@ async function scrapePageItems(page, meta) {
         pageUrl: item.pageUrl,
         title,
         link: item.link,
+        context: item.context || '',
         postedAt: extractDateFromText(`${title} ${item.context || ''}`)
       });
     }
@@ -842,6 +925,72 @@ async function scrapePageItems(page, meta) {
   };
 }
 
+async function enrichAssignmentDueDates(browserContext, assignments, origin) {
+  const out = [];
+  const dueByLink = new Map();
+  let scannedLinks = 0;
+  const MAX_LINK_SCANS = 80;
+
+  for (const item of assignments) {
+    if (item.dueAt || !item.link || !/^https?:/i.test(item.link)) {
+      out.push(item);
+      continue;
+    }
+
+    let inferredDue = dueByLink.get(item.link);
+    if (inferredDue === undefined) {
+      inferredDue = null;
+      if (scannedLinks < MAX_LINK_SCANS) {
+        try {
+          const url = new URL(item.link);
+          if (url.origin === origin) {
+            const p = await browserContext.newPage();
+            attachDebugConsole(p);
+            await p.goto(item.link, { waitUntil: 'domcontentloaded', timeout: 45000 });
+            await p.waitForTimeout(700);
+
+            const detailText = await p.evaluate(() => {
+              const clean = (s) => (s || '').replace(/\s+/g, ' ').trim();
+              const bits = [];
+              const selectors = [
+                '[aria-label*="due" i]',
+                '[data-testid*="due" i]',
+                'time',
+                'dt',
+                'dd',
+                '.due-date',
+                '.deadline'
+              ];
+              for (const selector of selectors) {
+                for (const el of Array.from(document.querySelectorAll(selector)).slice(0, 60)) {
+                  const txt = clean(el.getAttribute?.('aria-label') || el.textContent || '');
+                  if (txt) bits.push(txt);
+                }
+              }
+              bits.push(clean((document.body?.innerText || '').slice(0, 3500)));
+              return bits.join(' | ');
+            });
+
+            inferredDue = extractDateFromText(detailText);
+            scannedLinks += 1;
+            await p.close();
+          }
+        } catch {
+          // Continue.
+        }
+      }
+      dueByLink.set(item.link, inferredDue);
+    }
+
+    out.push({
+      ...item,
+      dueAt: item.dueAt || inferredDue || null
+    });
+  }
+
+  return out;
+}
+
 const context = await chromium.launchPersistentContext(profileDir, {
   headless: false,
   viewport: { width: 1440, height: 900 }
@@ -849,6 +998,7 @@ const context = await chromium.launchPersistentContext(profileDir, {
 
 const page = context.pages()[0] || await context.newPage();
 attachDebugConsole(page);
+await loadCalendarOverrides();
 await page.goto(base, { waitUntil: 'domcontentloaded' });
 
 console.log('\nLog into Blackboard and open your real course dashboard/list page.');
@@ -974,8 +1124,9 @@ for (const bucket of courseBuckets.values()) {
 
   const directAssignments = bucket.assignmentCandidates.map((item) => ({
     ...item,
+    dueAt: item.dueAt || getCalendarDueOverride(item.courseTitle, item.title),
     assignmentTitle: item.assignmentTitle || item.title,
-    requirements: item.requirements || extractRequirementsFromContext(item.title || '', item.sourcePage || '')
+    requirements: item.requirements || extractRequirementsFromContext(item.title || '', item.context || '', item.sourcePage || '')
   }));
 
   allAssignments.push(...correlated, ...directAssignments);
@@ -1018,8 +1169,16 @@ for (const globalPath of ['/ultra/calendar', '/ultra/stream']) {
   }
 }
 
+const enrichedAllAssignments = await enrichAssignmentDueDates(context, allAssignments, identity.origin);
+
 const uniqueAssignments = uniqBy(
-  allAssignments
+  enrichedAllAssignments
+    .map((x) => ({
+      ...x,
+      dueAt: x.dueAt
+        || extractDateFromText(`${x.title || ''} ${x.context || ''} ${x.sourcePage || ''}`)
+        || getCalendarDueOverride(x.courseTitle, x.title)
+    }))
     .filter((x) => isRealAssignmentRecord(x))
     .filter((x) => {
       if (!x.dueAt) return true;
@@ -1161,7 +1320,7 @@ const reassignedAnnouncements = assignmentsRaw.filter(looksLikeAnnouncementRecor
 
 const assignments = assignmentsRaw.filter((a) => {
   if (looksLikeAnnouncementRecord(a) || looksLikeCalendarUiNoise(a)) return false;
-  const dueAt = a.dueAt || inferDateFromText(`${a.title || ''} ${a.sourcePage || ''}`);
+  const dueAt = a.dueAt || inferDateFromText(`${a.title || ''} ${a.context || ''} ${a.sourcePage || ''}`);
   if (!dueAt) return true;
   const dueMs = Date.parse(dueAt);
   return Number.isNaN(dueMs) || dueMs >= now;
@@ -1169,7 +1328,7 @@ const assignments = assignmentsRaw.filter((a) => {
 const announcements = [...announcementsRaw, ...reassignedAnnouncements];
 
 const enrichedAssignments = assignments.map((a) => {
-  const inferredDueAt = a.dueAt || inferDateFromText(`${a.title || ''} ${a.sourcePage || ''}`);
+  const inferredDueAt = a.dueAt || inferDateFromText(`${a.title || ''} ${a.context || ''} ${a.sourcePage || ''}`);
   const dueMs = inferredDueAt ? Date.parse(inferredDueAt) : NaN;
   const days = Number.isNaN(dueMs) ? null : Math.ceil((dueMs - now) / 86400000);
   let status = 'No due date';
@@ -1182,7 +1341,7 @@ const enrichedAssignments = assignments.map((a) => {
   return {
     ...a,
     assignmentTitle: a.assignmentTitle || a.title || '',
-    requirements: Array.isArray(a.requirements) ? a.requirements : [],
+    requirements: Array.isArray(a.requirements) ? a.requirements : extractRequirementsFromContext(a.title || '', a.context || ''),
     dueAt: inferredDueAt,
     daysUntilDue: days,
     status
@@ -1333,7 +1492,11 @@ function makeTable(headers, rows) {
   return `<table><thead><tr>${headers.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table>`;
 }
 
-const urgentRows = [...overdue, ...dueSoon].slice(0, 80).map((a) =>
+const immediateActionAssignments = sortedByDue.filter((a) =>
+  a.daysUntilDue !== null && a.daysUntilDue >= 0 && a.daysUntilDue <= 7
+);
+
+const urgentRows = immediateActionAssignments.slice(0, 80).map((a) =>
   `<tr><td>${esc(a.courseTitle)}</td><td>${link(a.link, a.assignmentTitle || a.title)}</td><td>${esc((a.requirements || []).slice(0, 3).join(' ; ') || '-')}</td><td>${fmtDate(a.dueAt)}</td><td>${fmtDays(a.daysUntilDue)}</td><td>${badge(a.status)}</td><td>${esc(a.urgencyScore ?? '-')}</td><td>${esc(a.recommendedXp ?? '-')}</td></tr>`
 );
 
@@ -1471,6 +1634,6 @@ fs.writeFileSync(path.join(outDir, 'summary.html'), html);
 console.log('Summary written:', path.join(outDir, 'summary.html'));
 JS_SUMMARY
 
-BLACKBOARD_BASE_URL="$BLACKBOARD_BASE_URL" OUT_DIR="$OUT_DIR" PROFILE_DIR="$PROFILE_DIR" DEBUG_TITLE_EXTRACTION="$DEBUG_TITLE_EXTRACTION" node scrape_blackboard.mjs
+BLACKBOARD_BASE_URL="$BLACKBOARD_BASE_URL" OUT_DIR="$OUT_DIR" PROFILE_DIR="$PROFILE_DIR" DEBUG_TITLE_EXTRACTION="$DEBUG_TITLE_EXTRACTION" CALENDAR_OVERRIDES="$CALENDAR_OVERRIDES" node scrape_blackboard.mjs
 OUT_DIR="$OUT_DIR" node generate_summary.mjs
 open -a "Google Chrome" "$OUT_DIR/summary.html"

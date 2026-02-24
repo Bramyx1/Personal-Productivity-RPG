@@ -1,0 +1,152 @@
+Week Of: Tasks Assignment Due Date
+Jan. 18, 2026
+(Class Begins:
+Jan. 20)
+Review HTML and CSS
+Observe XAMPP
+installation
+Download course
+software
+Discussion Board 1
+Syllabus Quiz
+Weekly Project 1/25/2026
+Jan. 25, 2026
+Review weekly reading
+on HTML and CSS syntax,
+Web page design
+Complete practice coding
+exercises
+Discussion Board 2
+Reading 2 Quiz
+Weekly Project 2/1/2026
+Feb. 1, 2026
+Review weekly reading on
+PHP and watch video
+lecture, complete practice
+coding exercises
+Discussion Board 3
+Reading 3 Quiz
+Weekly Project 2/8/2026
+Feb. 8, 2026
+Review weekly reading on
+WordPress and watch
+video lecture, complete
+practice coding exercises
+Discussion Board 4
+Reading 4 Quiz
+Weekly Project 2/15/2026
+Feb. 15, 2026
+Review weekly reading on
+WordPress templates,
+review web site mock-ups
+and wireframes
+Discussion Board 5
+Reading 5 Quiz
+Weekly Project
+2/22/2026
+Feb. 22, 2026
+Review weekly reading on
+eCommerce and
+WordPress, more about
+wireframes and mockups
+(with practice templates),
+research Web hosting
+providers (get a Web
+server by Midterm)
+Discussion Board 6
+Reading 6 Quiz
+Weekly Project
+3/1/2026
+Mar. 1, 2026
+Review reading on
+eCommerce and credit
+card
+authorization/merchant
+accounts, view video,
+review midterm study
+guide
+Discussion Board 7
+Reading 7 Quiz
+Weekly Project
+Midterm Study Guide 3/8/2026
+Mar. 8, 2026
+Review reading on
+midterm topics, complete
+practice exercise on
+eCommerce UIs, take
+Midterm Exam
+No Discussion Board
+No Quiz or Project
+** Midterm Exam **
+Mar. 16-20 Spring Break
+3/22/2026
+Mar. 22, 2026
+Review security and
+authentication readings,
+view lecture, complete
+practice exercise
+Discussion Board 9
+Reading 9 Quiz
+Weekly Project
+3/29/2026
+
+-- 1 of 2 --
+
+Mar. 29, 2026
+Review eCommerce
+procedures, maintenance,
+complete practice
+exercises
+Discussion Board 10
+Reading 10 Quiz
+Weekly Project 4/5/2026
+Apr. 5, 2026
+Reviewing WordPress
+migration, from local to
+live; choosing a server
+Discussion Board 11
+Reading 11 Quiz
+Weekly Project
+4/12/2026
+Apr. 12, 2026
+Customizing your
+WordPress site to be an
+eCommerce t-shirt store
+Discussion Board 12
+Reading 12 Quiz
+Weekly Project
+LAST CALL: YOU NEED TO HAVE YOUR WEB
+SERVER NOW
+4/19/2026
+Apr. 19, 2026
+Wordpress installations
+and moving from a local
+development server to a
+live server; apply the
+concepts of transferring
+over a WP installation
+No Discussion Board
+No Quiz
+Weekly Project
+SCHEDULE YOUR PROCTORED FINAL EXAM TIME
+4/26/2026
+Apr. 26, 2026
+Define and explain search
+engine optimization and
+analytics, analyze and
+describe potential ways to
+advertise on an
+eCommerce site
+Review and research
+portfolio sites
+Discussion Board 14
+Reading 14 Quiz
+Weekly Project
+SCHEDULE YOUR PROCTORED FINAL EXAM TIME 5/3/2026
+May 3, 2026
+Final Exam Week Proctored
+5/4 – 5/6
+Submit Final Project
+
+-- 2 of 2 --
+

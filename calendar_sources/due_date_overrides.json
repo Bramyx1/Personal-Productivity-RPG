@@ -1,0 +1,533 @@
+{
+  "version": 1,
+  "generatedAt": "2026-02-24T00:04:40.044Z",
+  "exact": [
+    {
+      "course": "CIT300",
+      "title": "Introduction Discussion Board",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Watch Learning Theory Video",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Learning Theory Video Discussion",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "CIT Program and Expectations Discussion",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Database Concepts Survey",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Network Concepts Survey",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Hardware Concepts Survey",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Security Concepts Survey",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Technology Management Survey",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Programming Survey",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Hardware and Software Discussion",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "The Future of Employment and Soft Skills",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Future of Employment and Soft Skills Discussion",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Technical Writing for CIT",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Technical Writing for CIT Discussion",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 1 Assignment",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 1 Quiz",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 2 Video Animations",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 2 Assignment",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 2 Quiz",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 3 Assignment",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 3 Quiz",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 4 Video Animations",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 4 Assignment",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 4 Quiz",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 5 Video Animations",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 5 Assignment",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 5 Quiz",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 6 Assignment",
+      "dueAt": "2026-03-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 6 Quiz",
+      "dueAt": "2026-03-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Extra Credit Mid-Semester Discussion Board (10 points)",
+      "dueAt": "2026-03-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 7 Video Animations",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 7 Assignment",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 7 Quiz",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 8 Video Animations",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 8 Assignment",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 8 Quiz",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 9 Video Animations",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 9 Assignment",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 9 Quiz",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 10 Assignment",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 10 Quiz",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 11 Assignment",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 11 Quiz",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 12 Assignment",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 12 Quiz",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 13 Assignment",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Chapter 13 Quiz",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Security Writing Assignment",
+      "dueAt": "2026-05-03T23:59:00.000Z"
+    },
+    {
+      "course": "CIT300",
+      "title": "Concluding Comments Discussion Board",
+      "dueAt": "2026-05-03T23:59:00.000Z"
+    }
+  ],
+  "patterns": [
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*1\\s+discussion\\b",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*1\\b",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*2\\s+discussion\\b",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*2\\b",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*3\\s+discussion\\b",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*3\\b",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*4\\s+discussion\\b",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*4\\b",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*5\\s+discussion\\b",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*5\\b",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*6\\s+discussion\\b",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*6\\b",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*7\\s+discussion\\b",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*7\\b",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*9\\s+discussion\\b",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*9\\b",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*10\\s+discussion\\b",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*10\\b",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*11\\s+discussion\\b",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*11\\b",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*12\\s+discussion\\b",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*12\\b",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bweek\\s*14\\s+discussion\\b",
+      "dueAt": "2026-05-03T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\bdiscussion\\s*board\\s*14\\b",
+      "dueAt": "2026-05-03T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*2\\s+quiz\\b",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*3\\s+quiz\\b",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*4\\s+quiz\\b",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*5\\s+quiz\\b",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*6\\s+quiz\\b",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*7\\s+quiz\\b",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*9\\s+quiz\\b",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*10\\s+quiz\\b",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*11\\s+quiz\\b",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*12\\s+quiz\\b",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "pattern": "\\breading\\s*14\\s+quiz\\b",
+      "dueAt": "2026-05-03T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*1\\b",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*2\\b",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*3\\b",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*4\\b",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*5\\b",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*6\\b",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*7\\b",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*8\\b",
+      "dueAt": "2026-03-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*9\\b",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*10\\b",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*11\\b",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*12\\b",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*13\\b",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "pattern": "\\b(?:assignment|discussion)\\s*#?\\s*14\\b",
+      "dueAt": "2026-05-01T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "pattern": "\\bchapter\\s*1\\b.*\\bquiz\\b",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "pattern": "\\bchapter\\s*3\\b.*\\bquiz\\b",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "pattern": "\\bexams*one\\b|\\bexams*1\\b",
+      "dueAt": "2026-02-20T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "pattern": "\\bexams*two\\b|\\bexams*2\\b",
+      "dueAt": "2026-03-23T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "pattern": "\\bfinal\\b.*\\bexam\\b|\\bexams*3\\b",
+      "dueAt": "2026-05-01T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "pattern": "\\bcrims*330s*paper\\b|\\bpaper\\b",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    }
+  ]
+}
