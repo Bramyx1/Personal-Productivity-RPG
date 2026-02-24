@@ -3,12 +3,18 @@
 const STORAGE_KEYS = {
   SETTINGS: 'settings',
   RESULTS: 'scanResults',
-  PENDING_SYNC: 'pendingSync'
+  PENDING_SYNC: 'pendingSync',
+  LAST_AUTO_SYNC_AT: 'lastAutoSyncAt'
 };
 
 const DEFAULT_SETTINGS = {
   rpgUrl: 'https://bramyx1.github.io/Personal-Productivity-RPG/'
 };
+
+const AUTO_SYNC_MIN_INTERVAL_MS = 60 * 1000;
+const AUTO_SYNC_SCAN_LIMIT = 12;
+
+let autoSyncInProgress = false;
 
 chrome.runtime.onInstalled.addListener(async () => {
   const data = await chrome.storage.local.get([STORAGE_KEYS.SETTINGS, STORAGE_KEYS.RESULTS]);
@@ -18,6 +24,12 @@ chrome.runtime.onInstalled.addListener(async () => {
   if (!data[STORAGE_KEYS.RESULTS]) {
     await chrome.storage.local.set({ [STORAGE_KEYS.RESULTS]: {} });
   }
+});
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status !== 'complete') return;
+  if (!isBlackboardUrl(tab?.url)) return;
+  void triggerAutoCollectAndSync(tabId, 'tab-updated');
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -41,17 +53,150 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 
   if (message.type === 'GUIDED_SCAN_ALL_COURSES') {
-    handleGuidedScanAllCourses(message.tabId)
+    autoCollectAndSync(message.tabId)
       .then((result) => sendResponse({ ok: true, ...result }))
       .catch((error) => sendResponse({ ok: false, error: error.message }));
     return true;
   }
 
+  if (message.type === 'AUTO_COLLECT_AND_SYNC') {
+    triggerAutoCollectAndSync(message.tabId || sender?.tab?.id || null, 'runtime-message')
+      .then((result) => sendResponse({ ok: true, ...result }))
+      .catch((error) => sendResponse({ ok: false, error: error.message }));
+    return true;
+  }
 });
 
-async function handleSyncToRpg(payload) {
-  const tasks = payload?.tasks || payload?.assignments || [];
-  return syncToRpg(tasks);
+async function triggerAutoCollectAndSync(originTabId, reason) {
+  if (!originTabId) {
+    return { triggered: false, reason: 'No origin tab id' };
+  }
+  if (autoSyncInProgress) {
+    return { triggered: false, reason: 'Auto sync already in progress' };
+  }
+
+  const data = await chrome.storage.local.get(STORAGE_KEYS.LAST_AUTO_SYNC_AT);
+  const lastAutoSyncAt = Number(data[STORAGE_KEYS.LAST_AUTO_SYNC_AT] || 0);
+  if (Date.now() - lastAutoSyncAt < AUTO_SYNC_MIN_INTERVAL_MS) {
+    return { triggered: false, reason: 'Auto sync cooldown active' };
+  }
+
+  autoSyncInProgress = true;
+  try {
+    const result = await autoCollectAndSync(originTabId);
+    await chrome.storage.local.set({ [STORAGE_KEYS.LAST_AUTO_SYNC_AT]: Date.now() });
+    return { triggered: true, reason, ...result };
+  } finally {
+    autoSyncInProgress = false;
+  }
+}
+
+async function autoCollectAndSync(originTabId) {
+  const originTab = await chrome.tabs.get(originTabId).catch(() => null);
+  if (!originTab?.id) {
+    throw new Error('No active tab available for auto collect.');
+  }
+
+  const urlsToScan = await getUrlsToScan(originTab.id, originTab.url || '');
+  const assignments = await scanUrlsFromOriginTab(originTab.id, urlsToScan);
+  const scored = assignments.map(scoreAssignment);
+
+  await upsertScanResults(scored);
+
+  const tasks = scored.map(toTask);
+  const syncResult = await syncToRpg(tasks);
+
+  return {
+    scanned: urlsToScan.length,
+    assignments: scored,
+    tasks: tasks.length,
+    synced: Boolean(syncResult.synced),
+    pending: Boolean(syncResult.pending)
+  };
+}
+
+async function getUrlsToScan(originTabId, originUrl) {
+  const urls = [];
+  if (isBlackboardUrl(originUrl)) {
+    urls.push(originUrl);
+  }
+
+  const linkResponse = await chrome.tabs.sendMessage(originTabId, { type: 'GET_COURSE_LINKS' }).catch(() => null);
+  const courseLinks = Array.isArray(linkResponse?.courseLinks) ? linkResponse.courseLinks : [];
+
+  for (const link of courseLinks) {
+    if (isBlackboardUrl(link)) {
+      urls.push(link);
+    }
+  }
+
+  const unique = Array.from(new Set(urls));
+  return unique.slice(0, AUTO_SYNC_SCAN_LIMIT);
+}
+
+async function scanUrlsFromOriginTab(originTabId, urls) {
+  const all = [];
+
+  for (const url of urls) {
+    let tabId = originTabId;
+    let createdTabId = null;
+
+    if (!(await tabHasUrl(originTabId, url))) {
+      const created = await chrome.tabs.create({ url, active: false });
+      createdTabId = created.id;
+      tabId = created.id;
+      await waitForTabComplete(tabId, 45000);
+    }
+
+    const scanResponse = await chrome.tabs.sendMessage(tabId, { type: 'SCAN_PAGE' }).catch(() => null);
+    const assignments = Array.isArray(scanResponse?.assignments) ? scanResponse.assignments : [];
+    all.push(...assignments);
+
+    if (createdTabId) {
+      await chrome.tabs.remove(createdTabId).catch(() => null);
+    }
+  }
+
+  return dedupeAssignments(all);
+}
+
+async function tabHasUrl(tabId, targetUrl) {
+  const tab = await chrome.tabs.get(tabId).catch(() => null);
+  return Boolean(tab?.url && tab.url === targetUrl);
+}
+
+async function waitForTabComplete(tabId, timeoutMs) {
+  const startedAt = Date.now();
+
+  while (Date.now() - startedAt < timeoutMs) {
+    const tab = await chrome.tabs.get(tabId).catch(() => null);
+    if (!tab) {
+      throw new Error('Tab closed before scan completed.');
+    }
+    if (tab.status === 'complete') return;
+    await delay(250);
+  }
+
+  throw new Error('Timed out waiting for tab to finish loading.');
+}
+
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function dedupeAssignments(assignments) {
+  const out = [];
+  const seen = new Set();
+
+  for (const assignment of assignments || []) {
+    const key = assignment.id
+      || `${assignment.title || ''}|${assignment.courseName || assignment.course || ''}|${assignment.dueAt || ''}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(assignment);
+  }
+
+  return out;
 }
 
 async function handleSyncPending() {
@@ -65,27 +210,12 @@ async function handleSyncPending() {
   return syncToRpg(pending.tasks);
 }
 
-async function handleGuidedScanAllCourses(originTabId) {
-  if (!originTabId) {
-    throw new Error('No active tab available for guided scan.');
-  }
-
-  const scanResponse = await chrome.tabs.sendMessage(originTabId, { type: 'SCAN_PAGE' });
-  const scored = (scanResponse?.assignments || []).map(scoreAssignment);
-  await upsertScanResults(scored);
-
-  return {
-    scanned: 1,
-    assignments: scored
-  };
-}
-
 async function upsertScanResults(assignments) {
   const existing = await chrome.storage.local.get(STORAGE_KEYS.RESULTS);
   const currentMap = existing[STORAGE_KEYS.RESULTS] || {};
 
   for (const assignment of assignments) {
-    const key = assignment.id || `${assignment.title}|${assignment.course}|${assignment.dueAt || ''}`;
+    const key = assignment.id || `${assignment.title}|${assignment.courseName || assignment.course || ''}|${assignment.dueAt || ''}`;
     currentMap[key] = assignment;
   }
 
@@ -135,6 +265,18 @@ function estimateDifficulty(title) {
   return Math.min(points, 100);
 }
 
+function toTask(item) {
+  return {
+    id: item.id,
+    title: item.title,
+    dueAt: item.dueAt || null,
+    courseName: item.courseName || item.course || 'Unknown course',
+    url: item.url || '',
+    priorityScore: item.priorityScore ?? item.urgencyScore ?? 20,
+    recommendedXP: item.recommendedXP ?? item.recommendedXp ?? 20
+  };
+}
+
 async function syncToRpg(tasks) {
   const rpgUrl = await getRpgUrl();
   const targetTab = await findOpenRpgTab(rpgUrl);
@@ -178,4 +320,14 @@ async function getRpgUrl() {
 async function findOpenRpgTab(rpgUrl) {
   const tabs = await chrome.tabs.query({});
   return tabs.find((tab) => typeof tab.url === 'string' && tab.url.startsWith(rpgUrl)) || null;
+}
+
+function isBlackboardUrl(url) {
+  if (!url || typeof url !== 'string') return false;
+  try {
+    const parsed = new URL(url);
+    return parsed.hostname.includes('blackboard') || /\/ultra\//i.test(parsed.pathname);
+  } catch {
+    return false;
+  }
 }
