@@ -251,6 +251,86 @@
       "course": "CIT300",
       "title": "Concluding Comments Discussion Board",
       "dueAt": "2026-05-03T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 1 Quiz",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 2 Quiz",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 3 Quiz",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 4 Quiz",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Exam One",
+      "dueAt": "2026-02-20T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 5 Quiz",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 6 Quiz",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 7 Quiz",
+      "dueAt": "2026-03-15T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Exam Two",
+      "dueAt": "2026-03-23T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 8 Quiz",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 9 Quiz",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 10 Quiz",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "CRIM 330 Paper",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 13 Quiz",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Chapter 14 Quiz",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CRIM330",
+      "title": "Final Exam",
+      "dueAt": "2026-05-01T23:59:00.000Z"
     }
   ],
   "patterns": [
