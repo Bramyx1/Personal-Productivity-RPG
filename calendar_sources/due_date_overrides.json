@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-02-24T00:04:40.044Z",
+  "generatedAt": "2026-02-25T01:11:03.401Z",
   "exact": [
     {
       "course": "CIT300",
@@ -330,6 +330,266 @@
     {
       "course": "CRIM330",
       "title": "Final Exam",
+      "dueAt": "2026-05-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 1",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 2",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 2 Quiz",
+      "dueAt": "2026-01-25T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 2",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 3",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 3 Quiz",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 3",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 4",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 4 Quiz",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 4",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 5",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 5 Quiz",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 5",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 6",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 6 Quiz",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 6",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 7",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 7 Quiz",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 7",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Midterm Exam",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 9",
+      "dueAt": "2026-03-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 9 Quiz",
+      "dueAt": "2026-03-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 9",
+      "dueAt": "2026-03-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 10",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 10 Quiz",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 10",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 11",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 11 Quiz",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 11",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 12",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 12 Quiz",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 12",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 12",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Discussion Board 14",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Reading 14 Quiz",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Weekly Project 14",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Final Exam",
+      "dueAt": "2026-05-03T23:59:00.000Z"
+    },
+    {
+      "course": "CIT302",
+      "title": "Final Project",
+      "dueAt": "2026-05-03T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #1",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #2",
+      "dueAt": "2026-02-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #3",
+      "dueAt": "2026-02-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #4",
+      "dueAt": "2026-02-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #5",
+      "dueAt": "2026-02-22T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #6",
+      "dueAt": "2026-03-01T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #7",
+      "dueAt": "2026-03-08T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #8",
+      "dueAt": "2026-03-15T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #9",
+      "dueAt": "2026-03-29T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #10",
+      "dueAt": "2026-04-05T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #11",
+      "dueAt": "2026-04-12T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #12",
+      "dueAt": "2026-04-19T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #13",
+      "dueAt": "2026-04-26T23:59:00.000Z"
+    },
+    {
+      "course": "CIT350",
+      "title": "Assignment #14",
       "dueAt": "2026-05-01T23:59:00.000Z"
     }
   ],
