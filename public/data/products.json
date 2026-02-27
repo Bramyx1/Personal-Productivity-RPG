@@ -1,0 +1,1370 @@
+[
+  {
+    "id": "10th-anniversary-signature-candle",
+    "name": "10th Anniversary Signature Candle",
+    "baseCost": 10.5,
+    "price": 25,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: 10th Anniversary Signature Candle.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "10th-anniversary-sweet-moses-coffee",
+    "name": "10th Anniversary Sweet Moses Coffee",
+    "baseCost": 3.36,
+    "price": 8,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: 10th Anniversary Sweet Moses Coffee.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "african-bongo-keychain",
+    "name": "African Bongo Keychain",
+    "baseCost": 2.1,
+    "price": 5,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Bongo Keychain.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "african-christmas-stocking",
+    "name": "African Christmas Stocking",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Christmas Stocking.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "african-crossbody-purse",
+    "name": "African Crossbody Purse",
+    "baseCost": 16.8,
+    "price": 40,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Crossbody Purse.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "african-diembe-keychain",
+    "name": "African Diembe Keychain",
+    "baseCost": 2.1,
+    "price": 5,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Diembe Keychain.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "african-fabric-headband",
+    "name": "African Fabric Headband",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Fabric Headband.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "african-fabric-notebook-with-pen",
+    "name": "African Fabric Notebook with Pen",
+    "baseCost": 5.88,
+    "price": 14,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Fabric Notebook with Pen.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "african-fanny-pack",
+    "name": "African Fanny Pack",
+    "baseCost": 5.88,
+    "price": 14,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Fanny Pack.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "african-flower-hair-clips",
+    "name": "African Flower Hair Clips",
+    "baseCost": 3.36,
+    "price": 8,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Flower Hair Clips.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "african-jewelry-bag",
+    "name": "African Jewelry Bag",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Jewelry Bag.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "african-pet-pal-ornaments",
+    "name": "African Pet Pal Ornaments",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Pet Pal Ornaments.",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "african-skies-perfume",
+    "name": "African Skies Perfume",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Skies Perfume.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "african-tire-angel-ornament",
+    "name": "African Tire Angel Ornament",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Tire Angel Ornament.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "african-tire-christmas-tree-ornament",
+    "name": "African Tire Christmas Tree Ornament",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Tire Christmas Tree Ornament.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "african-tire-heart-ornaments",
+    "name": "African Tire Heart Ornaments",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Tire Heart Ornaments.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "african-wooden-holiday-carving",
+    "name": "African Wooden Holiday Carving",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: African Wooden Holiday Carving.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "banana-leaf-circle-purse",
+    "name": "Banana Leaf Circle Purse",
+    "baseCost": 10.5,
+    "price": 25,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Banana Leaf Circle Purse.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "banana-leaf-coin-purse-glasses-case",
+    "name": "Banana Leaf Coin Purse/Glasses Case",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Banana Leaf Coin Purse/Glasses Case.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "banana-leaf-jewelry-box",
+    "name": "Banana Leaf Jewelry Box",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Banana Leaf Jewelry Box.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "bark-cloth-pouch",
+    "name": "Bark Cloth Pouch",
+    "baseCost": 5.88,
+    "price": 14,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Bark Cloth Pouch.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "beaded-basket",
+    "name": "Beaded Basket",
+    "baseCost": 12.6,
+    "price": 30,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Basket.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "beaded-bell-christmas-ornament",
+    "name": "Beaded Bell Christmas Ornament",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Bell Christmas Ornament.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "beaded-bracelet-w-charm",
+    "name": "Beaded Bracelet w/ Charm",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Bracelet w/ Charm.",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "beaded-christmas-tree",
+    "name": "Beaded Christmas Tree",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Christmas Tree.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "beaded-christmas-tree-ornament",
+    "name": "Beaded Christmas Tree Ornament",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Christmas Tree Ornament.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "beaded-cross-keychain",
+    "name": "Beaded Cross Keychain",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Cross Keychain.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "beaded-floral-container",
+    "name": "Beaded Floral Container",
+    "baseCost": 10.08,
+    "price": 24,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Floral Container.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "beaded-key-ring-w-tassle",
+    "name": "Beaded Key Ring W/ Tassle",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Key Ring W/ Tassle.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "beaded-sphere-christmas-ornament",
+    "name": "Beaded Sphere Christmas Ornament",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beaded Sphere Christmas Ornament.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "beautiful-get-well-card",
+    "name": "Beautiful Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beautiful Get Well Card.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "beautifully-crafted-card",
+    "name": "Beautifully crafted card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beautifully crafted card.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "beautifully-made-get-well-card",
+    "name": "Beautifully Made Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beautifully Made Get Well Card.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "belt-bag",
+    "name": "Belt Bag",
+    "baseCost": 9.24,
+    "price": 22,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Belt Bag.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "beyond-uganda-car-decal",
+    "name": "Beyond Uganda Car Decal",
+    "baseCost": 2.1,
+    "price": 5,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beyond Uganda Car Decal.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "beyond-uganda-embroidered-sweatsh",
+    "name": "Beyond Uganda Embroidered Sweatsh...",
+    "baseCost": 23.1,
+    "price": 55,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beyond Uganda Embroidered Sweatsh....",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "beyond-uganda-hotel-keychain",
+    "name": "Beyond Uganda Hotel Keychain",
+    "baseCost": 1.68,
+    "price": 4,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beyond Uganda Hotel Keychain.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "beyond-uganda-lapel-pin",
+    "name": "Beyond Uganda Lapel Pin",
+    "baseCost": 1.68,
+    "price": 4,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beyond Uganda Lapel Pin.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "beyond-uganda-trucker-hat",
+    "name": "Beyond Uganda Trucker Hat",
+    "baseCost": 10.5,
+    "price": 25,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Beyond Uganda Trucker Hat.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "bottlecap-diamond-hotpad",
+    "name": "Bottlecap Diamond HotPad",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Bottlecap Diamond HotPad.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "bottlecap-hotpad",
+    "name": "Bottlecap Hotpad",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Bottlecap Hotpad.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "bu-tire-bracelet",
+    "name": "BU Tire Bracelet",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: BU Tire Bracelet.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "carefully-crafted-get-well-card",
+    "name": "Carefully Crafted Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Carefully Crafted Get Well Card.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "carved-nativity-set",
+    "name": "Carved Nativity Set",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Carved Nativity Set.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "children-s-beaded-bracelet",
+    "name": "Children's Beaded Bracelet",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Children's Beaded Bracelet.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "clip-on-paper-beaded-necklace",
+    "name": "Clip-On Paper Beaded Necklace",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Clip-On Paper Beaded Necklace.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "coloring-book",
+    "name": "Coloring Book",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Coloring Book.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "computer-bag-w-strap",
+    "name": "Computer Bag w/ Strap",
+    "baseCost": 17.64,
+    "price": 42,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Computer Bag w/ Strap.",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "designer-backpack",
+    "name": "Designer Backpack",
+    "baseCost": 14.7,
+    "price": 35,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Designer Backpack.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "easter-cards",
+    "name": "Easter cards",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Easter cards.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "educate-t-shirts",
+    "name": "Educate t-shirts",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Educate t-shirts.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "elephant-pet-pal",
+    "name": "Elephant Pet Pal",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Elephant Pet Pal.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "get-well-card",
+    "name": "Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Get Well Card.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "go-and-make-genda-azuule-tshirt",
+    "name": "Go & Make - \"Genda Azuule\" Tshirt",
+    "baseCost": 14.7,
+    "price": 35,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Go & Make - \"Genda Azuule\" Tshirt.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "grass-basket-wall-hangings",
+    "name": "Grass Basket Wall Hangings",
+    "baseCost": 16.8,
+    "price": 40,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Grass Basket Wall Hangings.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "grass-hotpad",
+    "name": "Grass HotPad",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Grass HotPad.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "grass-place-mat-set",
+    "name": "Grass Place Mat Set",
+    "baseCost": 21,
+    "price": 50,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Grass Place Mat Set.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "green-get-well-card",
+    "name": "Green Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Green Get Well Card.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "green-handmade-get-well-card",
+    "name": "Green Handmade Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Green Handmade Get Well Card.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "hand-crafted-paper-bead-ornament",
+    "name": "Hand Crafted Paper Bead Ornament",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Hand Crafted Paper Bead Ornament.",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "hand-crafted-paper-bead-ornaments",
+    "name": "Hand Crafted Paper Bead Ornaments",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Hand Crafted Paper Bead Ornaments.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "handcrafted-blue-get-well-card",
+    "name": "Handcrafted Blue Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handcrafted Blue Get Well Card.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "handcrafted-bowl",
+    "name": "Handcrafted Bowl",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handcrafted Bowl.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "handcrafted-get-well-card",
+    "name": "Handcrafted Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handcrafted Get Well Card.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "handcrafted-necklace",
+    "name": "Handcrafted Necklace",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handcrafted Necklace.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "handmade-aprons",
+    "name": "Handmade Aprons",
+    "baseCost": 9.24,
+    "price": 22,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handmade Aprons.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "handmade-backpack",
+    "name": "Handmade Backpack",
+    "baseCost": 10.5,
+    "price": 25,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handmade Backpack.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "handmade-backpacks",
+    "name": "Handmade Backpacks",
+    "baseCost": 10.5,
+    "price": 25,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handmade Backpacks.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "handmade-beaded-star-ornaments",
+    "name": "Handmade Beaded Star Ornaments",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handmade Beaded Star Ornaments.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "handmade-bowl",
+    "name": "Handmade Bowl",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handmade Bowl.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "handmade-hotpad",
+    "name": "Handmade HotPad",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handmade HotPad.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "handmade-necklace",
+    "name": "Handmade Necklace",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handmade Necklace.",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "handmade-white-get-well-card",
+    "name": "Handmade White Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Handmade White Get Well Card.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "hippo-pet-pal",
+    "name": "Hippo Pet Pal",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Hippo Pet Pal.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "if-you-gave-your-life",
+    "name": "If you Gave your Life",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: If you Gave your Life.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "laptop-case",
+    "name": "Laptop Case",
+    "baseCost": 10.08,
+    "price": 24,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Laptop Case.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "mini-beaded-christmas-tree",
+    "name": "Mini Beaded Christmas Tree",
+    "baseCost": 5.88,
+    "price": 14,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Mini Beaded Christmas Tree.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "mini-pet-pal",
+    "name": "Mini Pet Pal",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Mini Pet Pal.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "mixed-pet-pal",
+    "name": "Mixed Pet Pal",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Mixed Pet Pal.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "more-than-clean-water",
+    "name": "More Than Clean Water",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: More Than Clean Water.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "moving-together-t-shirts",
+    "name": "Moving Together T-shirts",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Moving Together T-shirts.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "multi-colored-paper-beaded-bracelet",
+    "name": "Multi Colored Paper Beaded Bracelet",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Multi Colored Paper Beaded Bracelet.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "multi-colored-paper-beaded-earrings",
+    "name": "Multi Colored Paper Beaded Earrings",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Multi Colored Paper Beaded Earrings.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "multi-colored-paper-beaded-necklaces",
+    "name": "Multi colored paper beaded necklaces",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Multi colored paper beaded necklaces.",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "neutral-beaded-purse",
+    "name": "Neutral Beaded Purse",
+    "baseCost": 16.8,
+    "price": 40,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Neutral Beaded Purse.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "new-diamond-bottlecap-hot-pad",
+    "name": "NEW Diamond Bottlecap Hot Pad",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: NEW Diamond Bottlecap Hot Pad.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "new-round-bottlecap-hot-pad",
+    "name": "NEW Round Bottlecap Hot Pad",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: NEW Round Bottlecap Hot Pad.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "orange-handmade-get-well-card",
+    "name": "Orange Handmade Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Orange Handmade Get Well Card.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "palm-leaf-coin-purse",
+    "name": "Palm Leaf Coin Purse",
+    "baseCost": 6.3,
+    "price": 15,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Palm Leaf Coin Purse.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "paper-beaded-coil-bracelet",
+    "name": "Paper Beaded Coil Bracelet",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Paper Beaded Coil Bracelet.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "paper-beaded-evening-clutch",
+    "name": "Paper Beaded Evening Clutch",
+    "baseCost": 11.76,
+    "price": 28,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Paper Beaded Evening Clutch.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "paper-beaded-necklaces",
+    "name": "Paper beaded necklaces",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Paper beaded necklaces.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "paper-beaded-purse",
+    "name": "Paper Beaded Purse",
+    "baseCost": 16.8,
+    "price": 40,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Paper Beaded Purse.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "paper-beaded-thin-bracelet",
+    "name": "Paper Beaded Thin Bracelet",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Paper Beaded Thin Bracelet.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "paper-beaded-wide-bracelet",
+    "name": "Paper Beaded Wide Bracelet",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Paper Beaded Wide Bracelet.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "pearl-of-africa-perfume",
+    "name": "Pearl of Africa Perfume",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Pearl of Africa Perfume.",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "pencil-nativity",
+    "name": "Pencil Nativity",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Pencil Nativity.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "project-candle",
+    "name": "Project Candle",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Project Candle.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "project-sites-word-bracelets",
+    "name": "Project Sites Word Bracelets",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Project Sites Word Bracelets.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "recycled-tote-bag",
+    "name": "Recycled Tote Bag",
+    "baseCost": 12.6,
+    "price": 30,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Recycled Tote Bag.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "red-get-well-card",
+    "name": "Red Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Red Get Well Card.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "ruth-proiect-t-shirts",
+    "name": "Ruth Proiect T-shirts",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Ruth Proiect T-shirts.",
+    "image": "/assets/uploads/prod-06.png"
+  },
+  {
+    "id": "set-of-3-boho-grass-wall-hangings",
+    "name": "Set of 3 Boho Grass Wall Hangings",
+    "baseCost": 14.7,
+    "price": 35,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Set of 3 Boho Grass Wall Hangings.",
+    "image": "/assets/uploads/prod-07.png"
+  },
+  {
+    "id": "shaped-bottlecap-hotpads",
+    "name": "Shaped Bottlecap Hotpads",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Shaped Bottlecap Hotpads.",
+    "image": "/assets/uploads/prod-08.png"
+  },
+  {
+    "id": "shaped-variety-bottlecap-hotpad",
+    "name": "Shaped Variety Bottlecap Hotpad",
+    "baseCost": 7.56,
+    "price": 18,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Shaped Variety Bottlecap Hotpad.",
+    "image": "/assets/uploads/prod-09.png"
+  },
+  {
+    "id": "stainless-tumbler",
+    "name": "Stainless Tumbler",
+    "baseCost": 4.2,
+    "price": 10,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Stainless Tumbler.",
+    "image": "/assets/uploads/prod-10.png"
+  },
+  {
+    "id": "text-me-when-you-go-to-uganda-t-shirt",
+    "name": "Text Me When You Go To Uganda T-shirt",
+    "baseCost": 12.6,
+    "price": 30,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Text Me When You Go To Uganda T-shirt.",
+    "image": "/assets/uploads/prod-11.png"
+  },
+  {
+    "id": "the-clutch-handbag",
+    "name": "The \"Clutch\" Handbag",
+    "baseCost": 8.4,
+    "price": 20,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: The \"Clutch\" Handbag.",
+    "image": "/assets/uploads/prod-12.png"
+  },
+  {
+    "id": "the-alice-clutch",
+    "name": "The Alice Clutch",
+    "baseCost": 14.7,
+    "price": 35,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: The Alice Clutch.",
+    "image": "/assets/uploads/prod-01.png"
+  },
+  {
+    "id": "the-bugiri-duffel-bag",
+    "name": "The Bugiri Duffel Bag",
+    "baseCost": 10.92,
+    "price": 26,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: The Bugiri Duffel Bag.",
+    "image": "/assets/uploads/prod-02.png"
+  },
+  {
+    "id": "the-crossbody-purse",
+    "name": "The Crossbody Purse",
+    "baseCost": 16.8,
+    "price": 40,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: The Crossbody Purse.",
+    "image": "/assets/uploads/prod-03.png"
+  },
+  {
+    "id": "tire-wrap-bracelet",
+    "name": "Tire Wrap Bracelet",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Tire Wrap Bracelet.",
+    "image": "/assets/uploads/prod-04.png"
+  },
+  {
+    "id": "yellow-get-well-card",
+    "name": "Yellow Get Well Card",
+    "baseCost": 1.26,
+    "price": 3,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Yellow Get Well Card.",
+    "image": "/assets/uploads/prod-05.png"
+  },
+  {
+    "id": "yucatan-star-villa-keychain",
+    "name": "Yucatan Star Villa Keychain",
+    "baseCost": 5.04,
+    "price": 12,
+    "region": "Uganda",
+    "materials": [
+      "handcrafted mixed materials"
+    ],
+    "story": "Handcrafted item from local Ugandan makers: Yucatan Star Villa Keychain.",
+    "image": "/assets/uploads/prod-06.png"
+  }
+]

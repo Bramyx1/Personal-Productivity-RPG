@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmed</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main style="max-width:760px;padding-top:3rem;">
+      <p class="kicker">Order Confirmed</p>
+      <h1>Thank you for supporting Ugandan makers.</h1>
+      <p id="message">Your payment has been recorded and your order is now queued for fulfillment.</p>
+      <a href="/" class="btn" style="display:inline-block;margin-top:1rem;text-decoration:none;">Return to store</a>
+    </main>
+    <script>
+      const demo = new URLSearchParams(window.location.search).get('demo');
+      if (demo === '1') {
+        document.getElementById('message').textContent = 'Demo payment completed. Add STRIPE_SECRET_KEY in your server environment to switch to real card processing.';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "uganda-handmade-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-managed handmade Ugandan goods storefront",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

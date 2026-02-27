@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ugandan Handmade Market</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="utility-bar">
+        <div class="shell utility-inner">
+          <div class="utility-left">USD ($) | Worldwide Shipping</div>
+          <div class="utility-right">Email Offers | Gift Cards | Stores | Sign In</div>
+        </div>
+      </div>
+
+      <div class="shell brand-row">
+        <div class="brand-lockup">
+          <div class="brand-box">UGANDA CRAFT</div>
+          <div class="brand-script">by local makers</div>
+        </div>
+        <div class="search-actions">
+          <input type="text" aria-label="Search" placeholder="What are you looking for?" />
+          <button class="icon-btn" aria-label="Favorites">&#9825;</button>
+          <button id="cart-toggle" class="icon-btn bag-btn" aria-label="Cart">Bag <span id="cart-count">0</span></button>
+        </div>
+      </div>
+
+      <nav class="category-nav">
+        <div class="shell nav-scroll">
+          <a href="#">New</a>
+          <a href="#">Best Sellers</a>
+          <a href="#">Baskets</a>
+          <a href="#">Accessories</a>
+          <a href="#">Home Decor</a>
+          <a href="#">Jewelry</a>
+          <a href="#">Textiles</a>
+          <a href="#">Artisan Gifts</a>
+          <a href="#" class="sale">Sale</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="promo-strip">
+        <div class="shell promo-inner">
+          <p>Free shipping over $120 + card checkout available</p>
+          <button class="promo-btn">Shop New Arrivals</button>
+        </div>
+      </section>
+
+      <section class="chip-strip shell">
+        <div class="chip">color drop: <strong>earth tones</strong></div>
+        <div class="chip">wearing <strong>right now</strong></div>
+        <div class="chip">statement <strong>craft</strong></div>
+        <div class="chip">new <strong>drop shop</strong></div>
+      </section>
+
+      <section class="editorial-grid shell">
+        <article class="editorial editorial-main">
+          <img src="/assets/uploads/feature-main.png" alt="Featured handmade piece" />
+          <div class="overlay">
+            <p>spring edit</p>
+            <h1>Handmade in the Sun</h1>
+          </div>
+        </article>
+        <article class="editorial">
+          <img src="/assets/uploads/feature-side-1.png" alt="Shop bags" />
+          <div class="overlay small">
+            <p>Shop</p>
+            <h2>Bags + Totes</h2>
+          </div>
+        </article>
+        <article class="editorial">
+          <img src="/assets/uploads/feature-side-2.png" alt="Shop jewelry" />
+          <div class="overlay small">
+            <p>Shop</p>
+            <h2>Jewelry</h2>
+          </div>
+        </article>
+      </section>
+
+      <section class="shell explain">
+        <h2>How this works for you</h2>
+        <p id="pricing-note"></p>
+      </section>
+
+      <section class="shell stats" id="store-stats"></section>
+
+      <section id="products" class="shell products-section">
+        <div class="section-head">
+          <h2>Shop Collection</h2>
+          <p>Ready-to-sell products with pricing already calculated.</p>
+        </div>
+        <div id="product-grid" class="grid"></div>
+      </section>
+    </main>
+
+    <aside id="cart-panel" class="cart hidden">
+      <div class="cart-head">
+        <h3>Your Order</h3>
+        <button id="close-cart" class="btn-text">Close</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-total">
+        <strong>Total</strong>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <label for="payment-method">Choose payment method</label>
+      <select id="payment-method">
+        <option value="stripe_card">Credit/Debit Card (Stripe)</option>
+        <option value="bank_transfer">Bank Transfer</option>
+        <option value="cash_on_delivery">Cash on Delivery</option>
+      </select>
+      <button id="checkout-btn" class="checkout-btn">Complete Checkout</button>
+      <p class="tiny">Card checkout opens Stripe's secure page.</p>
+      <p id="checkout-message" class="tiny status"></p>
+    </aside>
+
+    <template id="product-template">
+      <article class="card">
+        <img class="card-image" alt="" />
+        <div class="card-body">
+          <p class="region"></p>
+          <h3 class="name"></h3>
+          <p class="story"></p>
+          <p class="materials"></p>
+          <div class="row">
+            <strong class="price"></strong>
+            <button class="add">Add to bag</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="/store.js" defer></script>
+  </body>
+</html>

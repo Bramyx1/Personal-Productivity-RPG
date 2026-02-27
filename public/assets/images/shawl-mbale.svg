@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#305d7c"/>
+      <stop offset="1" stop-color="#88b6cc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#e3edf2"/>
+  <rect x="140" y="140" width="520" height="320" fill="url(#g)" rx="16"/>
+  <path d="M190 180 V420 M250 180 V420 M310 180 V420 M370 180 V420 M430 180 V420 M490 180 V420 M550 180 V420 M610 180 V420" stroke="#d2e6f3" stroke-width="6"/>
+  <path d="M140 430 L660 430" stroke="#24475f" stroke-width="10"/>
+  <path d="M150 460 L170 500 M180 460 L200 500 M210 460 L230 500 M240 460 L260 500 M270 460 L290 500 M300 460 L320 500 M330 460 L350 500 M360 460 L380 500 M390 460 L410 500 M420 460 L440 500 M450 460 L470 500 M480 460 L500 500 M510 460 L530 500 M540 460 L560 500 M570 460 L590 500 M600 460 L620 500 M630 460 L650 500" stroke="#24475f" stroke-width="4"/>
+</svg>
